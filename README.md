@@ -1,31 +1,31 @@
-# (Application Name)
+# Galactic Age Calculator
 
-#### (Brief Description of Application)
+#### A calculator that equates Earth age to that on other planets
 
-#### By (Your Name Here)
+#### By Emilio Gonzales
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _HTML_
+* _CSS_
+* _Javascript_
+* _jQuery_
+* _NodeJS_
+* _Jest_
 
 ## Description
+_A calculator that takes the imput of a users age on earth and returns what the users age would be on another planet. Then it will provide the life expectancy of that person on that specific planet_
 
 ## Setup/Installation Requirements
-
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _Clone this repository to your desktop_
+* _Navigate to the top level of galactic-age main branch_
+* _open index.html in your browser or any file in your code editor_
 
 ## Known Bugs
-
-* _Any known issues_
-* _should go here_
+* _None of my jest testing works_
 
 ## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
 ## Contact Information
+Copyright (c) _2022_ _Emilio Gonzales_

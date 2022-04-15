@@ -1,5 +1,5 @@
 
-import { AgeCalc } from './src/galactic.js';
+import AgeCalc from './src/galactic.js';
 
 describe('AgeCalc', () => {
 
