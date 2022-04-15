@@ -1,8 +1,9 @@
-import { AgeCalc } from '../src/galactic.js';
 
-describe('Age Calculator', () => {
+import { AgeCalc } from './src/galactic.js';
+
+describe('AgeCalc', () => {
   test('should return the inputted age on Earth', () => {
-    const age = new AgeCalc(30);
-    expect(age.earthAge).toEqual(30);
+    const earthAge = new AgeCalc(30);
+    expect(earthAge).toEqual(30);
   });
 });
