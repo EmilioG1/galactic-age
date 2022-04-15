@@ -7,3 +7,4 @@ describe('AgeCalc', () => {
     expect(earthAge).toEqual(30);
   });
 });
+
