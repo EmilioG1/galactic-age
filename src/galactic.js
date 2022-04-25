@@ -1,18 +1,19 @@
 export class AgeCalc {
-  constructor(age, lifeExpectancy) {
+  constructor(age) {
     this.age = age;
-    this.lifeExpectancy = lifeExpectancy;
-    const earth = 1;
-    const mercury = 0.24;
-    const venus = 0.62;
-    const mars = 1.88;
-    const jupiter = 11.86;
+    this.lifeExpectancy = 80;
+    this.earth = 1;
+    this.mercury = this.age / 0.24;
+    this.venus = this.age / 0.62;
+    this.mars = this.age / 1.88;
+    this.jupiter = this.age / 11.86;
   }
-  whatAge() {
-    let mercuryAge = this.age * mercury;
-    let venusAge = this.age * venus;
-    let marsAge = this.age * mars;
-    let jupiterAge = this.age * jupiter;
-
+  mars() {
+    this.lifeExpectancy /= 1.88;
+    if (this.mars < this.lifeExpectancy) {
+      return Math.floor(this.lifeExpectancy - this.mars);
+    } else {
+      return Math.floor((this.lifeExpectancy - this.mars) * -1);
+    }
   }
 }
