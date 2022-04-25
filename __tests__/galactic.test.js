@@ -28,7 +28,4 @@ describe('AgeCalc', () => {
     expect(Math.floor(venusAge.venus)).toEqual(53);
   });
 
-  describe('mars', () => {
-    
-  });
 });
