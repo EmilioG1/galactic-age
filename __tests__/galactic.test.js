@@ -1,31 +1,31 @@
 
-import { AgeCalc } from './../src/galactic.js';
+import AgeCalc from './../src/galactic.js';
 
 describe('AgeCalc', () => {
+  let newAge = new AgeCalc(30);
 
-  test('should return the inputted age on Earth', () => {
-    const earthAge = new AgeCalc(30);
-    expect(earthAge.age).toEqual(30);
+  test('should return years in earth years', () => {
+    expect(newAge.earth).toEqual(30);
   });
 
   test('should return the inputted age on mars', () => {
-    const marsAge = new AgeCalc(33);
-    expect(Math.floor(marsAge.mars)).toEqual(17);
+    expect(Math.floor(newAge.planetAge('mars'))).toEqual(15);
   });
 
   test('should return the inputted age on jupiter', () => {
-    const jupiterAge = new AgeCalc(30);
-    expect(Math.floor(jupiterAge.jupiter)).toEqual(2);
+    expect(Math.floor(newAge.planetAge('jupiter'))).toEqual(2);
   });
 
   test('should return the inputted age on mercury', () => {
-    const mercuryAge = new AgeCalc(30);
-    expect(Math.floor(mercuryAge.mercury)).toEqual(125);
+    expect(Math.floor(newAge.planetAge('mercury'))).toEqual(125);
   });
 
   test('should return the inputted age on venus', () => {
-    const venusAge = new AgeCalc(33);
-    expect(Math.floor(venusAge.venus)).toEqual(53);
+    expect(Math.floor(newAge.planetAge('venus'))).toEqual(53);
   });
 
+//   test('should return life expectancy on mars', () => {
+//     let marsAge = new AgeCalc(30);
+//     expect(Math.floor(marsAge.mars.mars).toEqual(34));
+//   })
 });

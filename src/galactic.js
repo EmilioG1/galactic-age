@@ -1,22 +1,37 @@
-export class AgeCalc {
+export default class AgeCalc {
   constructor(age) {
-    this.age = age;
     this.lifeExpectancy = 80;
-    this.earth = 1;
-    this.mercury = this.age / 0.24;
-    this.venus = this.age / 0.62;
-    this.mars = this.age / 1.88;
-    this.jupiter = this.age / 11.86;
+    this.earth = age;
+    this.mercury = age;
+    this.venus = age;
+    this.mars = age;
+    this.jupiter = age;
   }
-  mars() {
-    this.lifeExpectancy /= 1.88;
-    if (this.mars < this.lifeExpectancy) {
-      return Math.floor(this.lifeExpectancy - this.mars);
+
+  planetAge(x) {
+    if (x === 'mercury') {
+      return this.mercury / 0.24;
+    } else if (x === 'venus') {
+      return this.venus / 0.62;
+    } else if (x === 'mars') {
+      return this.mars / 1.88;
+    } else if (x === 'jupiter') {
+      return this.jupiter / 11.86;
     } else {
-      return Math.floor((this.lifeExpectancy - this.mars) * -1);
+      return false;
     }
   }
+  marsAge() {
+    this.mars /= 1.88;
+    this.lifeExpectancy /= 1.88;
+    // if (this.mars < this.lifeExpectancy) {
+    //   return Math.floor(this.lifeExpectancy - this.mars);
+    // } else {
+    //   return Math.floor((this.lifeExpectancy - this.mars) * -1);
+    // }
+  }
   mercury() {
+    this.mercury /= 0.24;
     this.lifeExpectancy /= 0.24;
     if (this.mercury < this.lifeExpectancy) {
       return Math.floor(this.lifeExpectancy - this.mercury);
@@ -25,6 +40,7 @@ export class AgeCalc {
     }
   }
   venus() {
+    this.venus /= 0.62;
     this.lifeExpectancy /= 0.62;
     if (this.venus < this.lifeExpectancy) {
       return Math.floor(this.lifeExpectancy - this.venus);
@@ -33,6 +49,7 @@ export class AgeCalc {
     }
   }
   jupiter() {
+    this.jupiter /= 11.86;
     this.lifeExpectancy /= 11.86;
     if (this.venus < this.lifeExpectancy) {
       return Math.floor(this.lifeExpectancy - this.jupiter);
