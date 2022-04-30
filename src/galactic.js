@@ -21,6 +21,20 @@ export default class AgeCalc {
       return false;
     }
   }
+
+  lifeLeft(p) {
+    if (p === 'mercury') {
+      return this.lifeExpectancy / 0.24;
+    } else if (p === 'venus') {
+      return this.lifeExpectancy / 0.62;
+    } else if (p === 'mars') {
+      return this.lifeExpectancy / 1.88;
+    } else if (p === 'jupiter') {
+      return this.lifeExpectancy / 11.86;
+    } else {
+      return false;
+    }
+  }
   marsAge() {
     this.mars /= 1.88;
     this.lifeExpectancy /= 1.88;

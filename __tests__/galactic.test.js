@@ -21,11 +21,23 @@ describe('AgeCalc', () => {
   });
 
   test('should return the inputted age on venus', () => {
-    expect(Math.floor(newAge.planetAge('venus'))).toEqual(53);
+    expect(Math.floor(newAge.planetAge('venus'))).toEqual(48);
   });
 
-//   test('should return life expectancy on mars', () => {
-//     let marsAge = new AgeCalc(30);
-//     expect(Math.floor(marsAge.mars.mars).toEqual(34));
-//   })
+  test('should return life expectancy on mercury', () => {
+    expect(Math.floor(newAge.lifeLeft('mercury'))).toEqual(333);
+  });
+
+  test('should return life expectancy on venus', () => {
+    expect(Math.floor(newAge.lifeLeft('venus'))).toEqual(129);
+  });
+
+  test('should return life expectancy on mars', () => {
+    expect(Math.floor(newAge.lifeLeft('mars'))).toEqual(42);
+  });
+
+  test('should return life expectancy on jupiter', () => {
+    console.log(newAge.lifeLeft('jupiter'));
+    expect(Math.floor(newAge.lifeLeft('jupiter'))).toEqual(6);
+  });
 });
