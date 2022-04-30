@@ -41,19 +41,23 @@ describe('AgeCalc', () => {
   });
 
   test('should return final years left on mercury', () => {
-    console.log(newAge.finalAge('mercury'));
     expect(Math.floor(newAge.finalAge('mercury'))).toEqual(208);
   });
+
   test('should return final years left on venus', () => {
-    console.log(newAge.finalAge('venus'));
     expect(Math.floor(newAge.finalAge('venus'))).toEqual(80);
   });
+
   test('should return final years left on mars', () => {
-    console.log(newAge.finalAge('mars'));
     expect(Math.floor(newAge.finalAge('mars'))).toEqual(26);
   });
+
   test('should return final years left on jupiter', () => {
-    console.log(newAge.finalAge('jupiter'));
     expect(Math.floor(newAge.finalAge('jupiter'))).toEqual(4);
+  });
+
+  test('should return final years left on jupiter for someone over their expected age', () => {
+    let oldAge = new AgeCalc(85);
+    expect(Math.floor(oldAge.finalAge('jupiter'))).toEqual();
   });
 });
