@@ -57,7 +57,7 @@ describe('AgeCalc', () => {
   });
 
   test('should return final years left on jupiter for someone over their expected age', () => {
-    let oldAge = new AgeCalc(85);
-    expect(Math.floor(oldAge.finalAge('jupiter'))).toEqual();
+    let oldAge = new AgeCalc(100);
+    expect(Math.ceil(oldAge.finalAge('jupiter'))).toEqual(1);
   });
 });
