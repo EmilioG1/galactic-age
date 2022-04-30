@@ -37,7 +37,23 @@ describe('AgeCalc', () => {
   });
 
   test('should return life expectancy on jupiter', () => {
-    console.log(newAge.lifeLeft('jupiter'));
     expect(Math.floor(newAge.lifeLeft('jupiter'))).toEqual(6);
+  });
+
+  test('should return final years left on mercury', () => {
+    console.log(newAge.finalAge('mercury'));
+    expect(Math.floor(newAge.finalAge('mercury'))).toEqual(208);
+  });
+  test('should return final years left on venus', () => {
+    console.log(newAge.finalAge('venus'));
+    expect(Math.floor(newAge.finalAge('venus'))).toEqual(80);
+  });
+  test('should return final years left on mars', () => {
+    console.log(newAge.finalAge('mars'));
+    expect(Math.floor(newAge.finalAge('mars'))).toEqual(26);
+  });
+  test('should return final years left on jupiter', () => {
+    console.log(newAge.finalAge('jupiter'));
+    expect(Math.floor(newAge.finalAge('jupiter'))).toEqual(4);
   });
 });

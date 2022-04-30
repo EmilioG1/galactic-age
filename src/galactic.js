@@ -35,40 +35,64 @@ export default class AgeCalc {
       return false;
     }
   }
-  marsAge() {
-    this.mars /= 1.88;
-    this.lifeExpectancy /= 1.88;
-    // if (this.mars < this.lifeExpectancy) {
-    //   return Math.floor(this.lifeExpectancy - this.mars);
-    // } else {
-    //   return Math.floor((this.lifeExpectancy - this.mars) * -1);
-    // }
-  }
-  mercury() {
-    this.mercury /= 0.24;
-    this.lifeExpectancy /= 0.24;
-    if (this.mercury < this.lifeExpectancy) {
-      return Math.floor(this.lifeExpectancy - this.mercury);
+
+  finalAge(y) {
+    if (y === 'mercury') {
+      if (this.planetAge(y) < this.lifeLeft(y)) {
+        return Math.floor(this.lifeLeft(y) - this.planetAge(y));
+      } else {
+        return Math.floor((this.lifeLeft(y) - this.planetAge(y)) * -1);
+      }
+    } else if (y === 'venus') {
+      if (this.planetAge(y) < this.lifeLeft(y)) {
+        return Math.floor(this.lifeLeft(y) - this.planetAge(y));
+      } else {
+        return Math.floor((this.lifeLeft(y) - this.planetAge(y)) * -1);
+      }
+    } else if (y === 'mars') {
+      if (this.planetAge(y) < this.lifeLeft(y)) {
+        return Math.floor(this.lifeLeft(y) - this.planetAge(y));
+      } else {
+        return Math.floor((this.lifeLeft(y) - this.planetAge(y)) * -1);
+      }
+    } else if (y === 'jupiter') {
+      if (this.planetAge(y) < this.lifeLeft(y)) {
+        return Math.floor(this.lifeLeft(y) - this.planetAge(y));
+      } else {
+        return Math.floor((this.lifeLeft(y) - this.planetAge(y)) * -1);
+      }
     } else {
-      return Math.floor((this.lifeExpectancy - this.mercury) * -1);
+      return false;
     }
   }
-  venus() {
-    this.venus /= 0.62;
-    this.lifeExpectancy /= 0.62;
-    if (this.venus < this.lifeExpectancy) {
-      return Math.floor(this.lifeExpectancy - this.venus);
-    } else {
-      return Math.floor((this.lifeExpectancy - this.venus) * -1);
-    }
-  }
-  jupiter() {
-    this.jupiter /= 11.86;
-    this.lifeExpectancy /= 11.86;
-    if (this.venus < this.lifeExpectancy) {
-      return Math.floor(this.lifeExpectancy - this.jupiter);
-    } else {
-      return Math.floor((this.lifeExpectancy - this.jupiter) * -1);
-    }
-  }
+  // marsAge() {
+  //   if (this.mars < this.lifeExpectancy) {
+  //     return Math.floor(this.lifeExpectancy - this.mars);
+  //   } else {
+  //     return Math.floor((this.lifeExpectancy - this.mars) * -1);
+  //   }
+  // }
+  // mercury() {
+  //   this.mercury /= 0.24;
+  //   this.lifeExpectancy /= 0.24;
+  //   }
+  // }
+  // venus() {
+  //   this.venus /= 0.62;
+  //   this.lifeExpectancy /= 0.62;
+  //   if (this.venus < this.lifeExpectancy) {
+  //     return Math.floor(this.lifeExpectancy - this.venus);
+  //   } else {
+  //     return Math.floor((this.lifeExpectancy - this.venus) * -1);
+  //   }
+  // }
+  // jupiter() {
+  //   this.jupiter /= 11.86;
+  //   this.lifeExpectancy /= 11.86;
+  //   if (this.venus < this.lifeExpectancy) {
+  //     return Math.floor(this.lifeExpectancy - this.jupiter);
+  //   } else {
+  //     return Math.floor((this.lifeExpectancy - this.jupiter) * -1);
+  //   }
+  // }
 }
